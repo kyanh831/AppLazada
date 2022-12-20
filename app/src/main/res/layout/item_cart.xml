@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cart_item_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:padding="10dp"
+        android:src="@drawable/slider7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/border_20" />
+
+    <TextView
+        android:id="@+id/cart_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp"
+        app:layout_constrainedWidth="false"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="SET BO DO BA LO THOI TRANG SAKURA MS123"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_img"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_img"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_img"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cart_item_cate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="260dp"
+        android:layout_marginTop="12dp"
+        android:background="#E5E6E9"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:padding="2dp"
+        android:text="No brand, Nhom mau: Ao trang + size..."
+
+
+        android:textColor="#9D9B9B"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/cart_item_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cart_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_name" />
+
+    <TextView
+        android:id="@+id/cart_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="15.000 đ"
+        android:textColor="#DA3030"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cart_item_cate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cart_item_cate"
+        app:layout_constraintTop_toBottomOf="@+id/cart_item_cate" />
+
+    <TextView
+        android:id="@+id/btn_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="26dp"
+        android:layout_marginStart="68dp"
+        android:textAlignment="center"
+        android:padding="4dp"
+        android:background="#EFEAEA"
+        android:enabled="true"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_price"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_price"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_price"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cart_item_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sub"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+        app:layout_constraintStart_toEndOf="@+id/btn_sub"
+        app:layout_constraintTop_toTopOf="@+id/btn_sub" />
+
+    <TextView
+        android:id="@+id/btn_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="26dp"
+        android:textAlignment="center"
+        android:background="#EFEAEA"
+        android:padding="4dp"
+        android:text="+"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_qty"
+        app:layout_constraintEnd_toEndOf="@+id/cart_item_cate"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_qty" />
+</androidx.constraintlayout.widget.ConstraintLayout>
